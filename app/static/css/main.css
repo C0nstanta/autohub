@@ -3,6 +3,9 @@
 /* Base styles and reset */
 @import url('reset.css');
 
+/* Page-specific styles */
+@import url('repair_shop.css');
+
 /* Main components */
 @import url('header.css');
 @import url('hero.css');

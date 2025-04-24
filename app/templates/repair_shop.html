@@ -1,0 +1,396 @@
+{% extends "base.html" %}
+
+{% block title %}Repair Shop - Adaptive Auto Hub{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <video autoplay muted loop playsinline class="hero-video" poster="{{ url_for('static', filename='images/ezgif-frame-001.jpg') }}">
+        <source src="{{ url_for('static', filename='videos/Canva_Untitled_design_light_compressed.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="hero-overlay">
+        <h1>Expert Auto Repair & Maintenance Services</h1>
+        <p>Trust our skilled technicians to keep your vehicle running at its best with our comprehensive repair and maintenance services.</p>
+        <a href="#appointment" class="btn btn-primary btn-lg">Schedule Service</a>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services container my-5">
+    <div class="section-heading">
+        <h2>Our Services</h2>
+        <p>We provide a wide range of automotive repair and maintenance services to keep your vehicle running smoothly and efficiently.</p>
+    </div>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm hover-card">
+                <div class="card-body text-center">
+                    <div class="icon-circle mb-3">
+                        <i class="fas fa-oil-can fa-2x text-primary"></i>
+                    </div>
+                    <h4>Engine Diagnostics & Repair</h4>
+                    <p>Our expert technicians use advanced diagnostic tools to identify and fix engine issues quickly and accurately.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm hover-card">
+                <div class="card-body text-center">
+                    <div class="icon-circle mb-3">
+                        <i class="fas fa-car-battery fa-2x text-primary"></i>
+                    </div>
+                    <h4>Brake System Service</h4>
+                    <p>From brake pad replacement to complete system overhauls, we ensure your vehicle stops safely every time.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm hover-card">
+                <div class="card-body text-center">
+                    <div class="icon-circle mb-3">
+                        <i class="fas fa-cogs fa-2x text-primary"></i>
+                    </div>
+                    <h4>Transmission Repair</h4>
+                    <p>Keep your transmission running smoothly with our expert maintenance and repair services.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm hover-card">
+                <div class="card-body text-center">
+                    <div class="icon-circle mb-3">
+                        <i class="fas fa-check-square fa-2x text-primary"></i>
+                    </div>
+                    <h4>Scheduled Maintenance</h4>
+                    <p>Regular maintenance is key to longevity. Our comprehensive service packages keep your vehicle in top condition.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm hover-card">
+                <div class="card-body text-center">
+                    <div class="icon-circle mb-3">
+                        <i class="fas fa-snowflake fa-2x text-primary"></i>
+                    </div>
+                    <h4>AC Service & Repair</h4>
+                    <p>Stay cool with our air conditioning maintenance, recharge, and repair services for all vehicle makes and models.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm hover-card">
+                <div class="card-body text-center">
+                    <div class="icon-circle mb-3">
+                        <i class="fas fa-bolt fa-2x text-primary"></i>
+                    </div>
+                    <h4>Electrical System Repair</h4>
+                    <p>Our technicians diagnose and repair complex electrical issues using advanced diagnostic equipment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Maintenance Tips Section -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="section-heading">
+            <h2>Maintenance Tips</h2>
+            <p>Keep your vehicle running smoothly with these essential maintenance tips from our expert technicians.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm hover-card">
+                    <div class="card-body">
+                        <h4><i class="fas fa-oil-can mr-2 text-primary"></i> Regular Oil Changes</h4>
+                        <p>Check your engine oil level monthly and change it according to your vehicle's maintenance schedule. Fresh oil ensures proper engine lubrication and longevity.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check-circle text-primary mr-2"></i> Check oil levels at least once a month</li>
+                            <li><i class="fas fa-check-circle text-primary mr-2"></i> Change oil every 3,000-5,000 miles for conventional oil</li>
+                            <li><i class="fas fa-check-circle text-primary mr-2"></i> Change oil every 7,500-10,000 miles for synthetic oil</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm hover-card">
+                    <div class="card-body">
+                        <h4><i class="fas fa-car mr-2 text-primary"></i> Tire Maintenance</h4>
+                        <p>Check tire pressure weekly and rotate tires every 5,000-7,000 miles. Proper inflation improves fuel economy and extends tire life.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check-circle text-primary mr-2"></i> Inspect tire tread depth regularly</li>
+                            <li><i class="fas fa-check-circle text-primary mr-2"></i> Check for uneven wear patterns</li>
+                            <li><i class="fas fa-check-circle text-primary mr-2"></i> Maintain proper tire pressure for better mileage</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Appointment Section -->
+<section id="appointment" class="appointment container my-5">
+    <div class="section-heading">
+        <h2>Schedule an Appointment</h2>
+        <p>Book your service appointment today and experience our expert automotive care.</p>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="appointment-text">
+                <h3>Why Choose Our Repair Shop?</h3>
+                <p>At Adaptive Auto Hub's Repair Shop, we pride ourselves on providing exceptional service with certified technicians, state-of-the-art equipment, and a dedication to customer satisfaction. Our transparent pricing and quick turnaround times ensure you get back on the road faster.</p>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-check-circle text-primary mr-2"></i> ASE Certified Technicians</li>
+                    <li><i class="fas fa-check-circle text-primary mr-2"></i> State-of-the-Art Diagnostic Equipment</li>
+                    <li><i class="fas fa-check-circle text-primary mr-2"></i> Comprehensive Service for All Makes and Models</li>
+                    <li><i class="fas fa-check-circle text-primary mr-2"></i> Warranty on Parts and Labor</li>
+                    <li><i class="fas fa-check-circle text-primary mr-2"></i> Competitive Pricing and No Hidden Fees</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card shadow-sm">
+                <div class="card-body p-4">
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="vehicle">Vehicle Make & Model</label>
+                            <input type="text" class="form-control" id="vehicle" name="vehicle" placeholder="e.g., Toyota Camry" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <select class="form-control" id="service" name="service" required>
+                                <option value="">Select a Service</option>
+                                <option value="oil-change">Oil Change</option>
+                                <option value="brake-service">Brake Service</option>
+                                <option value="tire-rotation">Tire Rotation</option>
+                                <option value="engine-diagnostic">Engine Diagnostic</option>
+                                <option value="transmission">Transmission Service</option>
+                                <option value="ac-service">AC Service</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Preferred Date</label>
+                            <input type="date" class="form-control" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Additional Information</label>
+                            <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Schedule Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="section-heading">
+            <h2>What Our Customers Say</h2>
+            <p>Read what our satisfied customers have to say about our repair services.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="card-text">"The team at Adaptive Auto Hub provided exceptional service for my Toyota. Fast, efficient, and very transparent about the work needed."</p>
+                        <div class="d-flex align-items-center mt-3">
+                            <div class="ml-3">
+                                <h6 class="mb-0">Michael R.</h6>
+                                <small class="text-muted">Toyota Owner</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="card-text">"I've been bringing my Honda to Adaptive for years. Their technicians are knowledgeable, pricing is fair, and they never try to upsell unnecessary services."</p>
+                        <div class="d-flex align-items-center mt-3">
+                            <div class="ml-3">
+                                <h6 class="mb-0">Sarah K.</h6>
+                                <small class="text-muted">Honda Owner</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star-half-alt text-warning"></i>
+                        </div>
+                        <p class="card-text">"After struggling with dealership prices, I found Adaptive Auto Hub. They diagnosed and fixed my BMW's electrical issue at half the cost with better service."</p>
+                        <div class="d-flex align-items-center mt-3">
+                            <div class="ml-3">
+                                <h6 class="mb-0">David M.</h6>
+                                <small class="text-muted">BMW Owner</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="container my-5">
+    <div class="section-heading">
+        <h2>Frequently Asked Questions</h2>
+        <p>Find answers to commonly asked questions about our repair services.</p>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="accordion" id="faqAccordion">
+                <div class="card mb-3">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link text-left w-100 text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseOne">
+                                What types of vehicles do you service?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseOne" class="collapse show" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            We service all makes and models, including domestic and import vehicles. Our technicians are certified and experienced with Toyota, Honda, Ford, BMW, Mercedes, and many other brands.
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link text-left w-100 text-decoration-none collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo">
+                                Do you offer warranty on repairs?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Yes, we stand behind our work with a 12-month/12,000-mile warranty on parts and labor for most repairs. Specific warranty details may vary by service type, which will be clearly explained before any work begins.
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link text-left w-100 text-decoration-none collapsed" type="button" data-toggle="collapse" data-target="#collapseThree">
+                                How long will my service take?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Service times vary depending on the type of repair needed. Routine maintenance like oil changes typically take 30-60 minutes, while more complex repairs may take longer. We'll provide you with an estimated completion time when you drop off your vehicle.
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-header" id="headingFour">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link text-left w-100 text-decoration-none collapsed" type="button" data-toggle="collapse" data-target="#collapseFour">
+                                Do you offer pickup or drop-off services?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseFour" class="collapse" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Yes, we offer local pickup and drop-off services for customers within a 10-mile radius of our shop. We also have loaner vehicles available for extended repairs, subject to availability. Please ask about these services when scheduling your appointment.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="section-heading">
+            <h2>Contact Information</h2>
+            <p>Get in touch with our repair shop for any inquiries or to schedule a service appointment.</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h3>Reach Out to Us</h3>
+                        <div class="contact-info mb-4">
+                            <p><i class="fas fa-map-marker-alt text-primary mr-2"></i> <strong>Location:</strong> 123 Auto Service Way, Houston, TX 77001</p>
+                            <p><i class="fas fa-phone text-primary mr-2"></i> <strong>Phone:</strong> (555) 123-4567</p>
+                            <p><i class="fas fa-envelope text-primary mr-2"></i> <strong>Email:</strong> service@adaptiveautohub.com</p>
+                        </div>
+                        
+                        <h3>Business Hours</h3>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>Monday - Friday</td>
+                                    <td>8:00 AM - 7:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Sunday</td>
+                                    <td>Closed</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body p-0">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55316.81244789638!2d-95.39739601744123!3d29.756432992523602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640bf3509de1497%3A0x9ef37be99a6b39c7!2sDowntown%2C%20Houston%2C%20TX!5e0!3m2!1sen!2sus!4v1711918145387!5m2!1sen!2sus" width="100%" height="100%" style="min-height: 300px; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Include Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+{% endblock %}

@@ -23,6 +23,28 @@ def europe_delivery():
 def user_menu():
     return render_template('user_menu.html', user=current_user)
 
+@main.route('/repair-shop', methods=['GET', 'POST'])
+def repair_shop():
+    if request.method == 'POST':
+        # Process form data
+        name = request.form.get('name')
+        email = request.form.get('email')
+        phone = request.form.get('phone')
+        vehicle = request.form.get('vehicle')
+        service = request.form.get('service')
+        date = request.form.get('date')
+        message = request.form.get('message')
+        
+        # Here you would typically:
+        # 1. Save to database
+        # 2. Send confirmation email
+        # 3. Redirect with success message
+        
+        flash('Your appointment has been scheduled successfully!', 'success')
+        return redirect(url_for('main.repair_shop'))
+        
+    return render_template('repair_shop.html')
+
 @main.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
