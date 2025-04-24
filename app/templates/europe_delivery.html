@@ -1,0 +1,535 @@
+{% extends "base.html" %}
+
+{% block title %}Delivery to Europe - Adaptive Auto Hub{% endblock %}
+
+{% block content %}
+<!-- Enhanced Hero Section with Video Background -->
+
+
+<section class="hero-section" style="height: 70vh;">
+    <video autoplay muted loop playsinline class="hero-video" poster="{{ url_for('static', filename='images/ezgif-frame-001.jpg') }}">
+        <source src="{{ url_for('static', filename='videos/Canva_Untitled_design_light_compressed.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="hero-overlay">
+        <h1>Cars from the USA to Ukraine</h1>
+        <p class="lead mb-4">Premium pre-owned vehicles with fast, reliable, and secure shipping to Ukraine and Europe</p>
+        <div class="d-flex justify-content-center">
+            <a href="#car-filter" class="btn btn-primary btn-lg mr-3">Find Your Car</a>
+            <a href="#how-it-works" class="btn btn-outline-light btn-lg">How It Works</a>
+        </div>
+    </div>
+</section>
+
+<!-- Process Steps -->
+<section id="how-it-works" class="container my-5">
+    <h2 class="text-center mb-5">How Our Delivery Process Works</h2>
+    <div class="row">
+        <div class="col-md-3 text-center">
+            <div class="process-step">
+                <div class="process-icon mb-3">
+                    <span class="display-4">1</span>
+                </div>
+                <h4>Select a Vehicle</h4>
+                <p>Browse our inventory and find the perfect car that meets your needs and budget.</p>
+            </div>
+        </div>
+        <div class="col-md-3 text-center">
+            <div class="process-step">
+                <div class="process-icon mb-3">
+                    <span class="display-4">2</span>
+                </div>
+                <h4>Purchase & Documentation</h4>
+                <p>We handle all paperwork and prepare the vehicle for international shipping.</p>
+            </div>
+        </div>
+        <div class="col-md-3 text-center">
+            <div class="process-step">
+                <div class="process-icon mb-3">
+                    <span class="display-4">3</span>
+                </div>
+                <h4>Secure Shipping</h4>
+                <p>Your vehicle is carefully transported by our professional logistics partners.</p>
+            </div>
+        </div>
+        <div class="col-md-3 text-center">
+            <div class="process-step">
+                <div class="process-icon mb-3">
+                    <span class="display-4">4</span>
+                </div>
+                <h4>Delivery & Registration</h4>
+                <p>Receive your car and get assistance with local registration if needed.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Car Filter Form with improved styling -->
+<section id="car-filter" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Find Your Perfect Car</h2>
+        <div class="card shadow-sm">
+            <div class="card-body p-4">
+                <form class="row">
+                    <div class="col-md-3 mb-3">
+                        <label for="make" class="form-label">Make</label>
+                        <select class="form-control" id="make" name="make">
+                            <option value="">All Makes</option>
+                            <option value="toyota">Toyota</option>
+                            <option value="honda">Honda</option>
+                            <option value="ford">Ford</option>
+                            <option value="chevrolet">Chevrolet</option>
+                            <option value="bmw">BMW</option>
+                            <option value="mercedes">Mercedes-Benz</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="model" class="form-label">Model</label>
+                        <input type="text" class="form-control" id="model" name="model" placeholder="e.g., Camry">
+                    </div>
+                    <div class="col-md-2 mb-3">
+                        <label for="year_min" class="form-label">Year (Min)</label>
+                        <select class="form-control" id="year_min" name="year_min">
+                            <option value="">Any</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 mb-3">
+                        <label for="price_max" class="form-label">Max Price</label>
+                        <select class="form-control" id="price_max" name="price_max">
+                            <option value="">Any</option>
+                            <option value="15000">$15,000</option>
+                            <option value="20000">$20,000</option>
+                            <option value="25000">$25,000</option>
+                            <option value="30000">$30,000</option>
+                            <option value="40000">$40,000</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 d-flex align-items-end mb-3">
+                        <button type="submit" class="btn btn-primary btn-block">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Cars Section with improved card styling -->
+<section class="container my-5">
+    <h2 class="text-center mb-4">Featured Cars for Ukraine</h2>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm hover-card">
+                <div class="position-relative">
+                    <img src="{{ url_for('static', filename='images/pexels-photo-170811.jpeg') }}" class="card-img-top" alt="Toyota Camry">
+                    <span class="badge badge-success position-absolute" style="top: 10px; right: 10px;">Ready to Ship</span>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">2020 Toyota Camry XSE</h5>
+                    <p class="card-text mb-1"><i class="fas fa-tachometer-alt"></i> 25,400 miles</p>
+                    <p class="card-text mb-1"><i class="fas fa-gas-pump"></i> 2.5L 4-cylinder</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="h5 mb-0 text-primary">$21,990</span>
+                        <span class="text-muted">Delivery: 3-4 weeks</span>
+                    </div>
+                </div>
+                <div class="card-footer bg-white border-top-0">
+                    <a href="/cars" class="btn btn-outline-primary btn-block">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm hover-card">
+                <div class="position-relative">
+                    <img src="{{ url_for('static', filename='images/pexels-photo-170811.jpeg') }}" class="card-img-top" alt="Honda Accord">
+                    <span class="badge badge-success position-absolute" style="top: 10px; right: 10px;">Ready to Ship</span>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">2021 Honda Accord Sport</h5>
+                    <p class="card-text mb-1"><i class="fas fa-tachometer-alt"></i> 18,750 miles</p>
+                    <p class="card-text mb-1"><i class="fas fa-gas-pump"></i> 1.5L Turbo</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="h5 mb-0 text-primary">$24,500</span>
+                        <span class="text-muted">Delivery: 3-4 weeks</span>
+                    </div>
+                </div>
+                <div class="card-footer bg-white border-top-0">
+                    <a href="/cars" class="btn btn-outline-primary btn-block">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm hover-card">
+                <div class="position-relative">
+                    <img src="{{ url_for('static', filename='images/pexels-photo-170811.jpeg') }}" class="card-img-top" alt="Ford Mustang">
+                    <span class="badge badge-warning position-absolute" style="top: 10px; right: 10px;">Popular</span>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">2019 Ford Mustang GT</h5>
+                    <p class="card-text mb-1"><i class="fas fa-tachometer-alt"></i> 31,200 miles</p>
+                    <p class="card-text mb-1"><i class="fas fa-gas-pump"></i> 5.0L V8</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="h5 mb-0 text-primary">$32,750</span>
+                        <span class="text-muted">Delivery: 4-5 weeks</span>
+                    </div>
+                </div>
+                <div class="card-footer bg-white border-top-0">
+                    <a href="/cars" class="btn btn-outline-primary btn-block">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <a href="/cars" class="btn btn-primary">View All Available Cars</a>
+    </div>
+</section>
+
+<!-- Shipping Information Section -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2>Fast & Reliable Shipping to Ukraine</h2>
+                <p class="lead">We specialize in delivering vehicles to Ukraine with exceptional service and transparent pricing.</p>
+                <ul class="list-unstyled">
+                    <li class="mb-3"><i class="fas fa-check-circle text-primary mr-2"></i> Direct shipping from US ports to Ukraine</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-primary mr-2"></i> Full insurance coverage during transit</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-primary mr-2"></i> Customs clearance assistance</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-primary mr-2"></i> Door-to-door delivery options</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-primary mr-2"></i> Regular updates on shipping status</li>
+                </ul>
+                <a href="/contact" class="btn btn-primary">Contact Us For Details</a>
+            </div>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Shipping Estimate</h4>
+                        <form>
+                            <div class="form-group">
+                                <label for="car_type">Vehicle Type</label>
+                                <select class="form-control" id="car_type">
+                                    <option>Sedan</option>
+                                    <option>SUV</option>
+                                    <option>Truck</option>
+                                    <option>Luxury</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="destination">Destination City</label>
+                                <select class="form-control" id="destination">
+                                    <option>Kyiv</option>
+                                    <option>Lviv</option>
+                                    <option>Odesa</option>
+                                    <option>Kharkiv</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Calculate Shipping Cost</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Trust Signals Section with improved icons -->
+<section class="container my-5">
+    <h2 class="text-center mb-5">Why Choose Us for Ukraine Delivery?</h2>
+    <div class="row text-center">
+        <div class="col-md-4 mb-4">
+            <div class="trust-card p-4">
+                <div class="icon-circle mb-3">
+                    <i class="fas fa-shipping-fast fa-2x text-primary"></i>
+                </div>
+                <h4>Fast Delivery</h4>
+                <p>Your vehicle will arrive in Ukraine within 3-5 weeks, not months. We prioritize efficiency without compromising on safety.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="trust-card p-4">
+                <div class="icon-circle mb-3">
+                    <i class="fas fa-dollar-sign fa-2x text-primary"></i>
+                </div>
+                <h4>Transparent Pricing</h4>
+                <p>No hidden fees or surprises. Our quotes include all shipping, handling, and customs fees clearly itemized.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="trust-card p-4">
+                <div class="icon-circle mb-3">
+                    <i class="fas fa-shield-alt fa-2x text-primary"></i>
+                </div>
+                <h4>Secure Handling</h4>
+                <p>Every vehicle is fully insured and carefully handled from pickup to delivery by certified logistics professionals.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">What Our Customers Say</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="card-text">"I was nervous about buying a car from the US, but the entire process was smooth. My BMW arrived in Kyiv in perfect condition and earlier than expected!"</p>
+                        <div class="d-flex align-items-center mt-3">
+                            <div class="ml-3">
+                                <h6 class="mb-0">Oleksandr P.</h6>
+                                <small class="text-muted">Kyiv, Ukraine</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="card-text">"The team at Adaptive Auto Hub handled all the complex paperwork and customs. I saved thousands compared to buying locally and got a much better car."</p>
+                        <div class="d-flex align-items-center mt-3">
+                            <div class="ml-3">
+                                <h6 class="mb-0">Natalia K.</h6>
+                                <small class="text-muted">Lviv, Ukraine</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star-half-alt text-warning"></i>
+                        </div>
+                        <p class="card-text">"This was my second car purchased through Adaptive Auto Hub. The constant updates and tracking gave me peace of mind throughout the shipping process."</p>
+                        <div class="d-flex align-items-center mt-3">
+                            <div class="ml-3">
+                                <h6 class="mb-0">Viktor M.</h6>
+                                <small class="text-muted">Odesa, Ukraine</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="container my-5">
+    <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="accordion" id="faqAccordion">
+                <div class="card mb-3">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link text-left w-100 text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseOne">
+                                How long does shipping to Ukraine typically take?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseOne" class="collapse show" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Shipping typically takes 3-5 weeks from purchase to delivery. This includes processing time, ocean freight, customs clearance, and final delivery to your specified location in Ukraine.
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link text-left w-100 text-decoration-none collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo">
+                                What documents do I need to import a car to Ukraine?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            You'll need the vehicle title, purchase invoice, export declaration, and a bill of lading. We provide all these documents as part of our service and guide you through any additional requirements for local registration.
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link text-left w-100 text-decoration-none collapsed" type="button" data-toggle="collapse" data-target="#collapseThree">
+                                Are there any import duties or taxes?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Yes, Ukraine has import duties and taxes for vehicles. The exact amount depends on the vehicle's age, engine size, and value. We provide a detailed estimate of all fees before you commit to purchase and can help you navigate the most cost-effective options.
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-header" id="headingFour">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link text-left w-100 text-decoration-none collapsed" type="button" data-toggle="collapse" data-target="#collapseFour">
+                                Is the vehicle insured during shipping?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseFour" class="collapse" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Absolutely. All vehicles are fully insured during the entire shipping process from our facility until delivery to your specified location in Ukraine. The insurance covers any potential damage or loss during transit.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call-to-Action Section -->
+<section class="bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Get Your Dream Car Shipped to Ukraine?</h2>
+        <p class="lead mb-4">Our team is ready to help you find and ship your perfect vehicle with our hassle-free process.</p>
+        <div class="d-flex justify-content-center">
+            <a href="/contact" class="btn btn-light btn-lg mr-3">Contact Us</a>
+            <a href="/cars" class="btn btn-outline-light btn-lg">Browse Inventory</a>
+        </div>
+    </div>
+</section>
+
+<!-- Custom CSS for this page -->
+<style>
+    /* Process steps styling */
+    .process-step {
+        padding: 20px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        height: 100%;
+    }
+    
+    .process-step:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .process-icon {
+        width: 70px;
+        height: 70px;
+        background-color: #0056b3;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    /* Card hover effect */
+    .hover-card {
+        transition: all 0.3s ease;
+    }
+    
+    .hover-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    /* Trust signal styling */
+    .trust-card {
+        height: 100%;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+    }
+    
+    .trust-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .icon-circle {
+        width: 80px;
+        height: 80px;
+        background-color: rgba(0,86,179,0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    /* FAQ styling */
+    .accordion .card-header {
+        background-color: white;
+        padding: 0;
+    }
+    
+    .accordion .btn-link {
+        color: #0056b3;
+        font-weight: 500;
+        padding: 15px;
+    }
+    
+    .accordion .btn-link:hover,
+    .accordion .btn-link:focus {
+        text-decoration: none;
+        color: #003d7a;
+    }
+    
+    /* Enhance link buttons */
+    .btn-primary {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+    
+    .btn-primary:hover {
+        background-color: #004494;
+        border-color: #004494;
+    }
+    
+    .btn-outline-primary {
+        color: #0056b3;
+        border-color: #0056b3;
+    }
+    
+    .btn-outline-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+    
+    /* Add Font Awesome (you'll need to include the Font Awesome library) */
+    @media (max-width: 767px) {
+        .process-step {
+            margin-bottom: 30px;
+        }
+    }
+</style>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/fix-padding.css') }}">
+{% endblock %}

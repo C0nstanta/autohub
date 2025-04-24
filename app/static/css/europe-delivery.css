@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}Delivery to Europe - Adaptive Auto Hub{% endblock %}
+
+{% block content %}
+<!-- Add class for page-specific styling -->
+<div class="europe-delivery">
+  <!-- Full width hero section with no padding -->
+  <section class="hero-section full-width">
+    <video autoplay muted loop playsinline class="hero-video" poster="{{ url_for('static', filename='images/ezgif-frame-001.jpg') }}">
+      <source src="{{ url_for('static', filename='videos/Canva_Untitled_design_light_compressed.mp4') }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="hero-overlay">
+      <h1>Cars from the USA to Ukraine</h1>
+      <p class="lead mb-4">Premium pre-owned vehicles with fast, reliable, and secure shipping to Ukraine and Europe</p>
+      <div class="d-flex justify-content-center">
+        <a href="#car-filter" class="btn btn-primary btn-lg mr-3">Find Your Car</a>
+        <a href="#how-it-works" class="btn btn-outline-light btn-lg">How It Works</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Steps -->
+  <section id="how-it-works" class="container my-5">
+    <h2 class="text-center mb-5">How Our Delivery Process Works</h2>
+    <div class="row">
+      <div class="col-md-3 text-center mb-4">
+        <div class="process-step">
+          <div class="process-icon mb-3">
+            <span class="display-4">1</span>
+          </div>
+          <h4>Select a Vehicle</h4>
+          <p>Browse our inventory and find the perfect car that meets your needs and budget.</p>
+        </div>
+      </div>
+      <div class="col-md-3 text-center mb-4">
+        <div class="process-step">
+          <div class="process-icon mb-3">
+            <span class="display-4">2</span>
+          </div>
+          <h4>Purchase & Documentation</h4>
+          <p>We handle all paperwork and prepare the vehicle for international shipping.</p>
+        </div>
+      </div>
+      <div class="col-md-3 text-center mb-4">
+        <div class="process-step">
+          <div class="process-icon mb-3">
+            <span class="display-4">3</span>
+          </div>
+          <h4>Secure Shipping</h4>
+          <p>Your vehicle is carefully transported by our professional logistics partners.</p>
+        </div>
+      </div>
+      <div class="col-md-3 text-center mb-4">
+        <div class="process-step">
+          <div class="process-icon mb-3">
+            <span class="display-4">4</span>
+          </div>
+          <h4>Delivery & Registration</h4>
+          <p>Receive your car and get assistance with local registration if needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rest of your content remains the same -->
+  <!-- ... -->
+</div>
+
+<!-- Link to Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!-- Include the modular CSS files -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}

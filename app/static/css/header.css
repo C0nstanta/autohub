@@ -1,0 +1,117 @@
+/* Header Styling */
+.site-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1050;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #0056b3;
+  }
+  
+  /* Navbar container */
+  .navbar {
+    width: 100%;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    background-color: #ffffff;
+  }
+  
+  /* Brand name styling */
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #0056b3 !important;
+    padding: 0;
+    margin-right: 2rem;
+    letter-spacing: -0.5px;
+  }
+  
+  /* Navigation items */
+  .navbar-nav .nav-item {
+    margin: 0 0.25rem;
+    font-weight: bold;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333333 !important;
+    padding: 0.75rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #0056b3 !important;
+    background-color: rgba(0, 86, 179, 0.05);
+  }
+  
+  /* Active nav link */
+  .navbar-nav .nav-item.active .nav-link {
+    color: #0056b3 !important;
+    border-bottom: 2px solid #0056b3;
+  }
+  
+  /* Right-side nav items */
+  .navbar-nav:last-child .nav-item .nav-link {
+    background-color: #0056b3;
+    color: white !important;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+  }
+  
+  .navbar-nav:last-child .nav-item .nav-link:hover {
+    background-color: #004494;
+    color: white !important;
+  }
+  
+  /* Toggle button for mobile */
+  .navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+    outline: none !important;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 86, 179, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  
+  /* Larger font for main menu items */
+  .main-nav .nav-link {
+    font-size: 1.25rem;
+  }
+  
+  /* Media queries for responsive design */
+  @media (max-width: 991.98px) {
+    .navbar-nav .nav-link {
+      padding: 0.75rem 0.5rem;
+      font-size: 14px;
+    }
+    
+    .navbar-brand {
+      font-size: 1.4rem;
+    }
+  }
+  
+  @media (max-width: 767.98px) {
+    .navbar-nav .nav-item {
+      margin: 0;
+    }
+    
+    .navbar-nav .nav-link {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .navbar-nav:last-child .nav-item .nav-link {
+      margin-left: 0;
+      margin-top: 0.5rem;
+    }
+  }

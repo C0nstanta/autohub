@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Adaptive Auto Hub{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chat-bot.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+
+<!-- Hero Section -->
+    <!-- 🚗 Optimized Hero Video Section -->
+<section class="hero-section">
+    <video autoplay muted loop playsinline class="hero-video" poster="{{ url_for('static', filename='images/ezgif-frame-001.jpg') }}">
+    <source src="{{ url_for('static', filename='videos/Canva_Untitled_design_light_compressed.mp4') }}" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+
+    <div class="hero-overlay">
+    <h1>Welcome to Adaptive Auto Hub</h1>
+    <p>Driven by quality. Delivered with care.</p>
+    <a href="/cars" class="btn btn-primary btn-lg mt-3">View Inventory</a>
+    </div>
+</section>
+ 
+    <!-- Featured Vehicles Section -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Featured Vehicles</h2>
+        <div class="row">
+            <!-- Car 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/pexels-photo-170811.jpeg') }}" class="card-img-top" alt="Car 1">
+                    <div class="card-body">
+                        <h5 class="card-title">2018 Toyota Camry</h5>
+                        <p class="card-text">$18,999</p>
+                        <a href="/cars" class="btn btn-outline-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Car 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/pexels-photo-170811.jpeg') }}" class="card-img-top" alt="Car 2">
+                    <div class="card-body">
+                        <h5 class="card-title">2020 Honda Civic</h5>
+                        <p class="card-text">$21,500</p>
+                        <a href="/cars" class="btn btn-outline-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Car 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/pexels-photo-170811.jpeg') }}" class="card-img-top" alt="Car 3">
+                    <div class="card-body">
+                        <h5 class="card-title">2019 Ford Mustang</h5>
+                        <p class="card-text">$26,000</p>
+                        <a href="/cars" class="btn btn-outline-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trust Signals Section -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Why Choose Us?</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <h4>Quality Vehicles</h4>
+                <p>All our cars are thoroughly inspected to ensure top performance.</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Flexible Financing</h4>
+                <p>We offer financing options for all credit types, including low down payments.</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Global Reach</h4>
+                <p>Serving customers worldwide, with seamless shipping to Ukraine.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

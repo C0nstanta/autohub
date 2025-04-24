@@ -1,0 +1,131 @@
+/* Main stylesheet - imports all modular CSS files */
+
+/* Base styles and reset */
+@import url('reset.css');
+
+/* Main components */
+@import url('header.css');
+@import url('hero.css');
+@import url('components.css');
+@import url('chatbot.css');
+
+/* Page-specific styles */
+@import url('europe-delivery.css');
+
+/* Additional utility classes */
+.text-primary {
+  color: #0056b3 !important;
+}
+
+.bg-primary {
+  background-color: #0056b3 !important;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+/* Ensure all sections have proper spacing */
+section {
+  position: relative;
+}
+
+/* Prevent horizontal scrolling on all pages */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Override bootstrap container for extreme edge cases */
+.container-fluid {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Helper class for full width elements */
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* Homepage Content Alignment Fix */
+
+/* Center the main content container properly */
+body > .container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  
+  /* Make sure Featured Vehicles heading is centered */
+  .container h2.text-center {
+    width: 100%;
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Fix vehicle cards row alignment */
+  .row {
+    margin-left: -15px;
+    margin-right: -15px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Ensure proper card spacing */
+  .col-md-4 {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 20px;
+  }
+  
+  /* Fix for any full-width sections to prevent right padding */
+  .full-width-section {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  /* Reset hero container width */
+  .hero-section {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 0;
+  }
+  
+  /* Fix for main content to ensure it's properly centered */
+  .container.my-5 {
+    max-width: 1200px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  
+  /* Additional fix for any unwanted overflow */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
